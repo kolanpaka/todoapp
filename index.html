@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/11bc3c9fe9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="todo-container">
+        <h1 id="currentDate" class="current-date"></h1>
+        <div class="navbar">
+            <p class="task-count"><span id="taskCount">0</span> task</p>
+            <button class="btn" id="allButton" onclick="displayAll()">All</button>
+            <button class="btn" id="activeButton" onclick="displayActive()">Active</button>
+            <button class="btn" id="completedButton" onclick="displayCompleted()">Completed</button>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 0.6em; gap:5px;">
+            <input type="text" class="inputbox" placeholder="Add a new task..." id="inputBox" autocomplete="off" autofocus>
+            <div  class="image-container" onclick="addItem()">
+                <img src="https://img.freepik.com/premium-vector/add-icon-add-post-video-photo-vector-images_292645-294.jpg?w=740" alt="" style="width:40px;">
+            </div>
+        </div>
+        <hr class="horizontal-line">
+        <div class="taskbar" id="taskBar">
+            <p class="error-message" id="errorMessage">Not found a task</p>
+            <ul class="list-items" id="activeItems">
+            </ul>
+            <ul class="list-items" id="completedItems">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
