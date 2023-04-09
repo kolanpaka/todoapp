@@ -6,11 +6,13 @@
     /* border: 1px solid black; */
 
 }
+html,body{
+    min-height: 100vh;
+}
 :root{
     font-size: 62.5%;
 }
 body{
-    height:100vh;
     background-image: linear-gradient( 102.7deg, rgba(253,218,255,1) 8.2%,
     rgba(223,173,252,1) 19.6%, rgba(173,205,252,1) 36.8%, rgba(173,252,244,1) 73.2%, rgba(202,248,208,1) 90.9% );
     background-size: cover;
@@ -160,4 +162,24 @@ li{
 }
 .paragraph{
     flex-grow: 1;
+}
+@media(max-width:600px){
+    body{
+        padding: 0;
+        display: block;
+        background-image: none;
+    }
+    .todo-container{
+        border-radius: 0;
+        max-width: 100vw;
+        width: 100%;
+        min-height: 100%;
+        padding: 2.5em 1.6em;
+    }
+   .taskbar,.error-message{
+        min-height: calc(100vh - 154px);
+    }
+    .image-container>img:hover{
+        transform:  none;
+    }
 }
